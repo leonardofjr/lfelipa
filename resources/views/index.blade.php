@@ -2,7 +2,7 @@
 <html>
     <head>
         <script src="https://cdn.rawgit.com/scottjehl/picturefill/3.0.2/dist/picturefill.min.js"></script>
-        <title>Triple C Automotive</title>
+        <title> {{$data['title']}} </title>
         <meta name="viewport" content="width=device-width, initial scale=1.0">
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400|Open+Sans:300,400|Oswald:200,300,400|Roboto:100,300,400|Vollkorn" rel="stylesheet" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -18,69 +18,66 @@
     <body>
         <a id="top"></a>
         <header>
-            @include ('components.jumbotron')
-            @include ('components.testimonials')
             @include('components.navigation')
         </header>
         <main>
-        <div class="container">
-            <div class="content">
-                <section class="about-container py-5"><a id="about"></a>
-                    <div class="about-header fade-in">
-                        @include('components.one-column-paragraph-heading', [
+            <div class="container">
+                <section class="home-container vh-100 py-5">
+                    <a id="home"></a>
+                    <div class="home-content center-content">
+                        @include('blueprints.one-column-paragraph-heading', [
                         'headingTag' => 'h2', 
                         'heading' => $data['heading1'],
                         'text' => $data['text1']
                         ])
                     </div>
-                    <div class="about-content row">
-                         @include('components.three-column-heading-paragraph-image', [
-                         'heading1' => $data['heading2'],
-                         'text1' => $data['text2'], 
-                         'img1' => $data['img1'],
+                </section>
 
-                         'heading2' => $data['heading3'],
-                         'text2' => $data['text3'],
-                         'img2' => $data['img2'],
+                 <section class="work-container vh-100 py-5">
+                    <a id="work"></a>
+                    <div class="work-content ">
+                        <h2 class="text-center">{{$data['heading2']}}</h2>
+                    </div>
+                </section>
+                
 
-                         'heading3' => $data['heading4'],
-                         'text3' => $data['text4'],
-                         'img3' => $data['img3']
-                         ])
+                 <section class="skills-container vh-100 py-5">
+                    <a id="skills"></a>
+                    <div class="skills-content ">
+                        <h2 class="text-center">{{$data['heading3']}}</h2>
+
+                        <div class="col-3">
+                            <h2>Languages</h2>
+                            <div>
+                                <span>Javascript:</span> <span class="javascript"></span>
+                            </div>
+                           <div>
+                                <span>Angular:</span> <span class="angular"></span>
+                            </div>
+                            <div>
+                                <span>Express:</span> <span class="express"></span>
+                            </div>
+
+                        </div>
+               
+                        
                     </div>
                 </section>
 
-                <section class="featured-content row text-center py-5">
-                   @include('components.three-column-heading-image-description-button', [
-                         'heading1' => $data['heading5'],
-                         'description1' => $data['description1'], 
-                         'img1' => $data['img4'],
-                         'buttonName1' => $data['buttonName1'],
-
-                         'heading2' => $data['heading6'],
-                         'description2' => $data['description2'], 
-                         'img2' => $data['img5'],
-                         'buttonName2' => $data['buttonName2'],
-
-                         'heading3' => $data['heading7'],
-                         'description3' => $data['description3'], 
-                         'img3' => $data['img6'],
-                         'buttonName3' => $data['buttonName3'],
-
-                         ])
+                <section class="about-container vh-100 py-5">
+                    <a id="about"></a>
+                    <div class="about-content row">
+                        @include('blueprints.two-column-image-heading-paragraph', [
+                            'img1' => $data['profilePhoto'],
+                            'heading1' => $data['heading4'],
+                            'text' => $data['text1']
+                            ])
+                    </div>
                 </section>
-
-                <section>
-                    @include('inc.sections.services')
-                </section>
+                
+               
             </div>
-        </div>
-        <section class="special-offers-container py-5">
-            @include('inc.sections.discounts')
-        </section>
-        <section class="map">
-            @include('components.map')
-        </section>
+      
         </main>
         <footer>
             <a id="bottom"></a>

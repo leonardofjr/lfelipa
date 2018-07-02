@@ -1,0 +1,16 @@
+.mobile-navigation {
+  ul {
+background: none;
+  }
+  
+}
+nav {
+
+   ul {
+    height: 80px;
+    @include nav-bar-gradient;
+    list-style: none;
+  }
+   
+
+}

@@ -87,7 +87,10 @@ $(document).ready(function () {
 
 $(document).ready(function () {
 
-
+    $(".javascript").timer(90);
+    $(".angular").timer(85);
+    $(".express").timer(80);
+    
 /**** Srolling Functionality Services ****/
     // init controller
     var anchorLinkScrollingController = new ScrollMagic.Controller();
@@ -143,52 +146,41 @@ function revealElement(target, animation) {
     $(target).removeClass('invisible');
     $(target).addClass('animated' + animation);
 }
-$(document).ready(function () {
-    $('.main-carousel').slick({
-        autoplay: true,
-        autoplaySpeed: 2000,
-        pauseOnHover: false,
-        pauseOnFocus: false,
-        infinite: true,
-        speed: 500,
-        fade: true,
-        cssEase: 'linear'
-    });
-});
-$('.testimonial-responsive-carousel').slick({
-    dots: false,
-    infinite: true,
-    speed: 300,
-    autoplay: true,
-    autoplaySpeed: 1000,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-        {
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: true,
-                dots: true
-            }
-        },
-        {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
+
+$.fn.timer = function (progress) {
+    class progressBar {
+        constructor(progress) {
+            this.progress = progress;
         }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-    ]
-});
+
+        init(target) {
+            this.render(target)
+        }
+
+        getProgress() {
+            return this.progress;
+        }
+
+        render(target) {
+            this.animation(target)
+        }
+        
+        animation(target) {
+            target[0]
+
+            var timeleft = this.getProgress();
+            var time = this.getProgress();
+            var timer = setInterval(function () {
+                target[0].innerHTML = time- --timeleft + '%';
+                if (timeleft <= 0)
+                    clearInterval(timer);
+            }, 30);
+
+        }
+
+    }
+  
+    var javascript = new progressBar(progress);
+    javascript.init($(this))
+};
+

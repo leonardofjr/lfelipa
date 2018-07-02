@@ -1,6 +1,9 @@
 $(document).ready(function () {
 
-
+    $(".javascript").timer(90);
+    $(".angular").timer(85);
+    $(".express").timer(80);
+    
 /**** Srolling Functionality Services ****/
     // init controller
     var anchorLinkScrollingController = new ScrollMagic.Controller();
