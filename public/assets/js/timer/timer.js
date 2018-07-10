@@ -6,7 +6,7 @@ $.fn.timer = function (progress) {
         }
 
         init(target) {
-            this.render(target)
+            this.render(target[0])
         }
 
         getProgress() {
@@ -18,14 +18,13 @@ $.fn.timer = function (progress) {
         }
         
         animation(target) {
-            target[0]
-
             var timeleft = this.getProgress();
             var time = this.getProgress();
             var timer = setInterval(function () {
-                target[0].innerHTML = time- --timeleft + '%';
-                if (timeleft <= 0)
+                target.innerHTML = time- --timeleft + '%';
+                if (timeleft <= 0) {
                     clearInterval(timer);
+                }
             }, 30);
 
         }
@@ -33,6 +32,7 @@ $.fn.timer = function (progress) {
     }
   
     var javascript = new progressBar(progress);
+
     javascript.init($(this))
 };
 

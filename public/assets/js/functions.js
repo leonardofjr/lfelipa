@@ -1,9 +1,5 @@
 $(document).ready(function () {
 
-    $(".javascript").timer(90);
-    $(".angular").timer(85);
-    $(".express").timer(80);
-    
 /**** Srolling Functionality Services ****/
     // init controller
     var anchorLinkScrollingController = new ScrollMagic.Controller();
@@ -31,12 +27,12 @@ $(document).ready(function () {
 
     var servicesController = new ScrollMagic.Controller();
     $('.fade-in').each(function () {
-        var tween = TweenMax.from(this , 0.2, {autoAlpha: 0, scale: 0.5, y: '-=50', ease: Linear.easeNone});
+        var fadeTween = TweenMax.from(this , 0.2, {autoAlpha: 0, scale: 0.5, y: '-=50', ease: Linear.easeNone});
 
         var scene = new ScrollMagic.Scene({
             triggerElement: this
         })
-        .setTween(tween) // trigger a TweenMax tween
+        .setTween(fadeTween) // trigger a TweenMax tween
         .addTo(servicesController)
     })
 
@@ -58,4 +54,28 @@ $(document).ready(function () {
 function revealElement(target, animation) {
     $(target).removeClass('invisible');
     $(target).addClass('animated' + animation);
+}
+
+var triggered = false;
+
+if (triggered == false) {
+    $(window).scroll(function (event) {
+        var hT = $('.skills-container').offset().top;
+        var wH = $(window).height();
+        var wS = $(this).scrollTop();
+        if (wS > (hT - wH) && triggered == false) {
+            $(".javascript").timer(90);
+            $(".angular").timer(85);
+            $(".photoshop").timer(90);
+            $(".dreamweaver").timer(87);
+            $(".linux").timer(87);
+            $(".mac").timer(87);
+            $(".windows").timer(87);
+            triggered = true;
+        }
+
+
+    });
+
+
 }

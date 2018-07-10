@@ -10,7 +10,9 @@
         <link rel="stylesheet" href="./css/slick-1.8.0/slick.css">
         <link rel="stylesheet" href="./css/slick-1.8.0/slick-theme.css">
         <link rel="stylesheet" href="./css/animate-css/animate.css">
-        <link rel="stylesheet" href="./css/font-awesome/css/font-awesome.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+
         <link rel="stylesheet" href="./css/app.css">
 
         
@@ -25,42 +27,72 @@
                 <section class="home-container vh-100 py-5">
                     <a id="home"></a>
                     <div class="home-content center-content">
-                        @include('blueprints.one-column-paragraph-heading', [
-                        'headingTag' => 'h2', 
-                        'heading' => $data['heading1'],
-                        'text' => $data['text1']
-                        ])
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                            <h2 class="text-center">I'm <span class="  developer-name">{{ $data['heading1'] }}</span></h2>
+                            <p class="pb-5 text-center">{{  $data['text1']}}</p>
+
+                  
+                            <div class="form-inline">
+                                <button class="create-dialog-box-btn btn btn-primary mb-2 col-12 col-lg-5" >Change Name</button>
+                               <div class="col-lg-5 input-dialog-box form-group mb-2"></div>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
                  <section class="work-container vh-100 py-5">
                     <a id="work"></a>
-                    <div class="work-content ">
                         <h2 class="text-center">{{$data['heading2']}}</h2>
-                    </div>
+                         @include('components.work')
                 </section>
                 
+
+               
 
                  <section class="skills-container vh-100 py-5">
                     <a id="skills"></a>
                     <div class="skills-content ">
                         <h2 class="text-center">{{$data['heading3']}}</h2>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                                <h2>Languages</h2>
+                                @if(sizeof($languages) > 1 )
+                                    @foreach($languages as $value) 
+                                    <div>  
+                                        <span>{{$value}}</span> <span class={{strtolower($value)}}>0%</span>
+                                    </div>
+                                    @endforeach
+                                @else
+                                    
+                                @endif
+                            </div>
+                
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                                <h2>Software</h2>
+                                @if(sizeof($softwares) > 1 )
+                                    @foreach($softwares as $value) 
+                                    <div>  
+                                        <span>{{$value}}</span> <span class={{strtolower($value)}}>0%</span>
+                                    </div>
+                                    @endforeach
+                                @else
+                                    
+                                @endif
+                            </div>
 
-                        <div class="col-3">
-                            <h2>Languages</h2>
-                            <div>
-                                <span>Javascript:</span> <span class="javascript"></span>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                                <h2>Operating Systems</h2>
+                                @if(sizeof($os) > 1 )
+                                    @foreach($os as $value) 
+                                    <div>  
+                                        <span>{{$value}}</span> <span class={{strtolower($value)}}>0%</span>
+                                    </div>
+                                    @endforeach
+                                @else
+                                    
+                                @endif
                             </div>
-                           <div>
-                                <span>Angular:</span> <span class="angular"></span>
-                            </div>
-                            <div>
-                                <span>Express:</span> <span class="express"></span>
-                            </div>
-
                         </div>
-               
-                        
                     </div>
                 </section>
 

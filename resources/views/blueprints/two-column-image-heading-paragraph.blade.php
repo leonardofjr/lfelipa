@@ -1,10 +1,10 @@
-<div class="col-lg-3 col-md-3 col-sm-3 col-3 fade-in">
+<div class="col-lg-3 col-md-3 col-sm-3 col-12 fade-in">
     <div class="img-container d-flex align-items-center justify-content-center">
         <img src= "{{ $img1 or '#' }}" alt="">
     </div>
 </div>
 
-<div class="col-lg-9 col-md-9 col-sm-9 col-9 fade-in">
+<div class="col-lg-9 col-md-9 col-sm-9 col-12 fade-in">
     <h3 class="pl-3">
         {{ $heading1 or 'Heading' }}
     </h3>

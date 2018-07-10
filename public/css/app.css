@@ -38,6 +38,10 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
+strong {
+  font-weight: 600;
+}
+
 /*** Hyperlinks ***/
 a {
   color: #000;
@@ -96,6 +100,30 @@ nav ul {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6ffffff', endColorstr='#fefefe',GradientType=0 );
   /* IE6-9 */
   list-style: none;
+}
+
+.work-container nav ul {
+  height: inherit;
+}
+
+.work-container nav ul li {
+  cursor: pointer;
+  padding: 14px;
+  color: #aaa;
+}
+
+.work-container nav ul li:hover {
+  color: #444;
+}
+
+.work-container nav ul .active {
+  color: #000;
+  font-weight: 800;
+}
+
+.work-container .websites-container, .work-container .apps-container, .work-container .games-container {
+  display: none;
+  list-style-type: none;
 }
 
 /** Layout **/
