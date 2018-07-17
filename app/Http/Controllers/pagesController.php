@@ -4,10 +4,15 @@
     use Mail;
     use Illuminate\Routing\Controller;
     use App\Post; 
+    use DB;
 
     class PagesController extends Controller {
-       
+
         public function getHomepage() {
+            
+                // Issue Resolved
+           
+    
             $data = [
                 'title' => 'Backend & Frontend Web Developer - Leonardo Felipa',
 
@@ -28,32 +33,9 @@
             $languages = ['Javascript', 'Angular'];
             $softwares = ['Photoshop', 'Dreamweaver'];
             $os = ['Windows', 'Mac', 'Linux'];
-
-            $work = [ 
-                'isa_clean' => [
-                    'heading' => 'ISA Clean',
-                    'text' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, similique quibusdam molestiae nam hic culpa aliquid, reiciendis pariatur ipsa possimus laborum ab odio provident voluptatum omnis autem nobis beatae nostrum.',
-                    'technologoies' => 'Wordpress, HTML5, CSS3, Javascript',
-                    'img' => '#',
-                    'type' => 'website'
-                ],
-                'startup_designs' => [
-                    'heading' => 'Startup Designs',
-                    'text' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, similique quibusdam molestiae nam hic culpa aliquid, reiciendis pariatur ipsa possimus laborum ab odio provident voluptatum omnis autem nobis beatae nostrum.',
-                    'technologoies' => 'PHP, MYSQL, HTML5, CSS3, Javascript, Laravel, SASS',
-                    'img' => '#',
-                    'type' => 'website',
-                ],
-                'hangman' => [
-                    'heading' => 'Hangman',
-                    'text' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, similique quibusdam molestiae nam hic culpa aliquid, reiciendis pariatur ipsa possimus laborum ab odio provident voluptatum omnis autem nobis beatae nostrum.',
-                    'technologoies' => 'HTML5, CSS3, Javascript',
-                    'img' => '#',
-                    'type' => 'game',
-                ],
-
-            ];
-
+            $work = DB::table('work')->get();
+           // dd($work);
+          //  dd(json_decode($work[0]->technologies, true));
             return view('index')->withData($data)->withLanguages($languages)->withSoftwares($softwares)->withOs($os)->withWork($work);
         } // getHomepage() Ends Here
 

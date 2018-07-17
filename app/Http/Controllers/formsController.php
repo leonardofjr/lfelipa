@@ -3,7 +3,6 @@
     use Illuminate\Http\Request;
     use App\Http\Controllers\Controller;
     use App\Http\Requests\MailFormValidationRequest;
-    use App\Http\Requests\NewsletterFormValidationRequest;
     use Mail;
     use App\Post; 
 
@@ -25,21 +24,5 @@
 
         return response()->json($data);
         }// postContact() Ends Here
-
-        public function postNewsletter(NewsletterFormValidationRequest $request) {
-
-            $data = [
-                'name' => $request->input('newsletterFormName'),
-                'email' => $request->input('newsletterFormEmail'),
-            ];
-
-            Mail::send('emails.newsletter', $data , function ($m) use ($data) {
-            $m->from($data['email'], $data['name']);
-            $m->to('leo@startupdesigns.ca')->subject('A new user has subscribed to triplecauto.ca');
-        });
-
-        return response()->json($data);
-        }// postNewsletter() Ends Here
-
     }
 ?>
