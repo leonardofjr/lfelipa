@@ -22,12 +22,14 @@ $(document).ready(function () {
 
             success: function (data, status) {
                 // 
+                console.log(data);
                 if (status === 'success') {
                     // We will redirect our user to the following url
-                    location.href = '/admin/work';
+                 //   location.href = '/admin/work';
                 }
             },
             error: function (xhr, status, err) {
+                console.log(xhr);
                 response = xhr.responseJSON;
                 if (response.title) {
                     $('.flash-message-title span').html(response.title[0]);

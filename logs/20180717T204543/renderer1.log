@@ -1,0 +1,5 @@
+[2018-07-17 20:45:48.325] [renderer1] [info] no standard startup: not the explorer viewlet
+[2018-07-17 20:46:03.201] [renderer1] [info] no standard startup: not just one text editor
+[2018-07-17 20:46:36.063] [renderer1] [error] Error: Inotify limit reached (ENOSPC)
+[2018-07-17 20:46:46.097] [renderer1] [info] No grammar found for scope source.smarty
+[2018-07-17 20:46:46.102] [renderer1] [info] No grammar found for scope text.html.javadoc

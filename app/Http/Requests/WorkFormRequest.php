@@ -25,7 +25,7 @@ class WorkFormRequest extends Request
     {
            return [
                 'title' => 'required|min:2|max:25',
-                'description' => 'required|min:50|max:250',
+                'description' => 'required|min:50|max:1000',
         ];
     }
 
@@ -35,7 +35,7 @@ class WorkFormRequest extends Request
                 'title.required' => 'Title field is required',
                 'title.min' => 'Title must be greater than 2 characters',
                 'title.max' => 'Title must be less than 50 characters',
-                'description.max' => 'Description field must be less than 250 characters',
+                'description.max' => 'Description field must be less than 1000 characters',
                 'description.min' => 'Description field must be greater than 50 characters',
         ];
     }

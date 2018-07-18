@@ -1,0 +1,267 @@
+Looking for git in: git
+Using git 2.17.1 from git
+> git rev-parse --show-toplevel
+> git config --get commit.template
+Open repository: /var/www/html/lfelipa
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git check-ignore -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git check-ignore -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git show :public/assets/js/ajax/work-form.js
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git check-ignore -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git show :resources/views/backend/addWorkPost.blade.php
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git show :app/Http/Controllers/pagesController.php
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :app/Http/Controllers/formsController.php
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :app/Http/Controllers/pagesController.php
+> git show :resources/views/backend/addWorkPost.blade.php
+> git check-ignore -z --stdin
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :app/Http/Controllers/formsController.php
+> git show :public/assets/js/ajax/work-form.js
+> git show :resources/views/backend/addWorkPost.blade.php
+> git show :public/assets/js/ajax/work-form.js
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git show :app/Http/Requests/WorkFormRequest.php
+> git rev-parse --show-toplevel
+> git config --get commit.template
+Open repository: /var/www/html/startup-designs
+> git status -z -u
+> git show :app/Http/Controllers/adminGalleryController.php
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/Http/Controllers/pagesController.php
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :app/Http/Controllers/adminGalleryController.php
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :app/Http/Controllers/adminGalleryController.php
+> git show :app/Http/Controllers/pagesController.php
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :app/Http/Controllers/adminGalleryController.php
+> git show :app/Http/Controllers/pagesController.php
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :app/Http/Controllers/Controller.php
+> git show :app/Http/Controllers/pagesController.php
+> git check-ignore -z --stdin
+> git show :app/Http/Controllers/FileHandling.php
+> git show :app/Http/Controllers/adminGalleryController.php
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :app/Http/Controllers/FileHandling.php
+> git show :app/Http/Controllers/adminGalleryController.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/Http/Controllers/FileHandling.php
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :app/Http/Controllers/pagesController.php
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :app/Http/Controllers/FileHandling.php
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :app/Http/Controllers/FileHandling.php
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :app/Http/Controllers/FileHandling.php
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :app/Http/Controllers/FileHandling.php
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :app/Http/Controllers/Controller.php
+> git show :app/Http/Controllers/FileHandling.php
+> git show :app/Http/Controllers/Controller.php
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git show :logs/20180717T204543/main.log
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git show :.env
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git show :logs/20180717T204543/renderer1.log
+> git show :logs/20180717T204543/sharedprocess.log
+> git show :logs/20180717T204543/renderer1.log
+> git show :logs/20180717T204543/main.log
+> git show :logs/20180717T204543/exthost1.log
+> git show :logs/20180717T204543/output_1_20180717T204547/extension-output-#1.log
+> git show :logs/20180717T204543/output_1_20180717T204547/tasks.log
+> git show :logs/20180717T204543/output_1_20180717T204547/extensions.log
+> git check-ignore -z --stdin
+> git show :logs/20180717T204543/output_1_20180717T204602/extension-output-#1.log
+> git show :logs/20180717T204543/output_1_20180717T204602/extension-output-#2.log
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git show :storage/logs/laravel-2018-07-18.log
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :storage/logs/laravel-2018-07-18.log
+> git show :app/Http/Controllers/FileHandling.php
+> git show :storage/logs/laravel-2018-07-18.log
+> git show :app/Http/Controllers/FileHandling.php
+> git show :storage/logs/laravel-2018-07-18.log
+> git show :app/Http/Controllers/FileHandling.php
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :storage/logs/laravel-2018-07-18.log
+> git show :app/Http/Controllers/FileHandling.php
+> git show :storage/logs/laravel-2018-07-18.log
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :storage/logs/laravel-2018-07-18.log
+> git show :app/Http/Controllers/FileHandling.php
+> git show :storage/logs/laravel-2018-07-18.log
+> git show :app/Http/Controllers/FileHandling.php
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :app/Http/Controllers/FileHandling.php
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :app/Http/Controllers/FileHandling.php
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :storage/logs/laravel-2018-07-18.log
+> git show :app/Http/Controllers/FileHandling.php
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :app/Http/Controllers/FileHandling.php
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :app/Http/Controllers/FileHandling.php
+> git show :storage/logs/laravel-2018-07-18.log
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :app/Http/Controllers/FileHandling.php
+> git show :storage/logs/laravel-2018-07-18.log
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :storage/logs/laravel-2018-07-18.log
+> git show :app/Http/Controllers/FileHandling.php
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :storage/logs/laravel-2018-07-18.log
+> git show :app/Http/Controllers/FileHandling.php
+> git show :storage/logs/laravel-2018-07-18.log
+> git show :app/Http/Controllers/FileHandling.php
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :app/Http/Controllers/FileHandling.php
+> git show :storage/logs/laravel-2018-07-18.log
+> git show :app/Http/Controllers/FileHandling.php
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :storage/logs/laravel-2018-07-18.log
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :app/Http/Controllers/FileHandling.php
+> git show :storage/logs/laravel-2018-07-18.log
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :app/Http/Controllers/FileHandling.php
+> git show :storage/logs/laravel-2018-07-18.log
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :app/Http/Controllers/FileHandling.php
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :app/Http/Controllers/FileHandling.php
+> git show :storage/logs/laravel-2018-07-18.log
+> git show :app/Http/Controllers/FileHandling.php
+> git show :storage/logs/laravel-2018-07-18.log
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :storage/logs/laravel-2018-07-18.log
+> git show :app/Http/Controllers/FileHandling.php
+> git show :storage/logs/laravel-2018-07-18.log
+> git show :app/Http/Controllers/FileHandling.php
+> git show :storage/logs/laravel-2018-07-18.log
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :app/Http/Controllers/FileHandling.php
+> git show :storage/logs/laravel-2018-07-18.log
+> git show :app/Http/Controllers/FileHandling.php
+> git show :storage/logs/laravel-2018-07-18.log
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :app/Http/Controllers/FileHandling.php
+> git show :storage/logs/laravel-2018-07-18.log
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :app/Http/Controllers/FileHandling.php
+> git show :storage/logs/laravel-2018-07-18.log
+> git show :app/Http/Controllers/FileHandling.php
+> git show :storage/logs/laravel-2018-07-18.log
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :app/Http/Controllers/FileHandling.php
+> git show :storage/logs/laravel-2018-07-18.log
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :app/Http/Controllers/FileHandling.php
+> git show :storage/logs/laravel-2018-07-18.log
+> git show :app/Http/Controllers/FileHandling.php
+> git show :storage/logs/laravel-2018-07-18.log
+> git show :app/Http/Controllers/FileHandling.php
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :storage/logs/laravel-2018-07-18.log
+> git show :app/Http/Controllers/AdminUserControlPanel.php
+> git show :app/Http/Controllers/FileHandling.php

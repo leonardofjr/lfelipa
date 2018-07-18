@@ -41,19 +41,29 @@ class AdminUserControlPanel extends Controller
                 $request->input('php'),
                 $request->input('mysql'),
         ];
+
+        $destination = 'assets/uploads';
+        $file = $request->file('image');
+        $fileinfo = pathinfo($file->getClientOriginalName());
+        $file->move($destination , $fileinfo['basename']);
+
         $filtered = array_filter($technologies, 'strlen');
         $filtered = array_values($filtered);
         $data = [
             'title' => $request->input('title'),
             'description' => $request->input('description'),
+            'img' => $request->file('image'),
+            'basename' => $fileinfo['basename'],
+            'filename' => $fileinfo['filename'],
+            'ext' => $fileinfo['extension'],
             'type' => $request->input('type'),
             'technologies' => json_encode($filtered),
         ];
 
-    
-        DB::table('work')->insert($data);
+    /*
+        DB::table('work')->insert($data);*/
         
-        return response()->json($request);
+        return response()->json($data);
     }
 
     

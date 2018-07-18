@@ -2,7 +2,7 @@
 @section('content')
             <section class="container"> 
             <h2>Add Work</h2>
-            <form id="addWorkForm" method="POST" action="add-new-work-post">
+            <form id="addWorkForm" method="POST" enctype="multipart/form-data" action="add-new-work-post">
                 {{ csrf_field() }}
                 <div class="form-group">
                     <label for="title">Title:</label>
@@ -25,6 +25,13 @@
                     </div>
                 </div>
 
+                <div class="form-group">
+                    <label for="image">Image:</label>
+                    <input type="file" class="form-control" id="image" name="image" >
+                        <div class="flash-message-image d-none">
+                        <span></span>
+                    </div>
+                </div>
                                 
                 <div class="form-group">
                     <label for="description">Description:</label>
