@@ -21,17 +21,13 @@ class AdminUserControlPanel extends Controller
     }
   
     public function getEditWorkPage($id) {
-      $programming_languages = $this->listOfProgrammingLanguages();
-      $type_dropdown = $this->typeDrowndown();
       $data = DB::table('work')->where('id', $id)->get();
-      return view('backend.editWorkPost')->withData($data[0])->withProgramming_languages($programming_languages)->withType_dropdown($type_dropdown)->withId($id);
+      return view('backend.editWorkPost')->withData($data[0])->withId($id);
     }
 
     public function getAddWorkPage() {
-           $programming_languages = $this->listOfProgrammingLanguages();
-         $type_dropdown = $this->typeDrowndown();
         // Passing in array of $langauges to View
-        return view('backend.addWorkPost')->withType_dropdown($type_dropdown)->withProgramming_languages($programming_languages);
+        return view('backend.addWorkPost');
     }
 
     
@@ -63,7 +59,7 @@ class AdminUserControlPanel extends Controller
     /*
         DB::table('work')->insert($data);*/
         
-        return response()->json($data);
+        return response()->json($request);
     }
 
     
@@ -104,19 +100,4 @@ class AdminUserControlPanel extends Controller
         $result = array_values($filtered);
         return $result;
     }
-
-    public function typeDrowndown() {
-        return array('Website', 'App', 'Game');
-    }
-
-    public function listOfProgrammingLanguages() {
-        return array(
-            'HTML5',
-            'CSS3',
-            'Javascript',
-            'PHP',
-            'MySql',
-        );
-    }
-  
 }

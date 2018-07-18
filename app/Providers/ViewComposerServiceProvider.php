@@ -14,7 +14,8 @@ class ViewComposerServiceProvider extends ServiceProvider
     public function boot()
     {
         view()->composer(
-            'backend.editWorkPost', 'App\Http\ViewComposers\AdminComposer'
+            ['backend.editWorkPost', 'backend.addWorkPost'],
+             'App\Http\ViewComposers\AdminComposer'
         );
     }
 

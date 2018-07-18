@@ -4,7 +4,7 @@
 
 <div class="row">
           <div class="offset-8">
-           <button><a href="work/add">Add Work</a></button>
+           <button><a href="{{url('/admin/work/add')}}">Add Work</a></button>
           </div>
           <div class="col-12">
           
@@ -32,5 +32,5 @@
 @endsection
 
 @section('after-body-scripts')
-<script src="../../../dist/scripts/scripts.js"></script>
+<script src="{{url('/dist/scripts/scripts.js')}}"></script>
 @endsection

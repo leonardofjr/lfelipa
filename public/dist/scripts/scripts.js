@@ -172,7 +172,7 @@ $(document).ready(function () {
         // Getting form data from selected form
         // $(this) contains the selected form
         e.preventDefault();
-        var formData = new FormData($('#addWorkForm')[0]);
+        var formData = new FormData($(this)[0]);
         // Starting Ajax request
         $.ajax({
             url: $(this).attr('action'),
@@ -190,14 +190,12 @@ $(document).ready(function () {
 
             success: function (data, status) {
                 // 
-                console.log(data);
                 if (status === 'success') {
                     // We will redirect our user to the following url
-                 //   location.href = '/admin/work';
+                    location.href = '/admin/work';
                 }
             },
             error: function (xhr, status, err) {
-                console.log(xhr);
                 response = xhr.responseJSON;
                 if (response.title) {
                     $('.flash-message-title span').html(response.title[0]);
@@ -206,6 +204,7 @@ $(document).ready(function () {
                 else {
                     $('.flash-message-title').addClass('d-none');
                 }
+                
                 if (response.description) {
                     $('.flash-message-description span').html(response.description[0]);
                     $('.flash-message-description').removeClass('d-none');
@@ -224,7 +223,7 @@ $(document).ready(function () {
         e.preventDefault();
         // Getting form data from selected form
         // $(this) contains the selected form
-        var formData = new FormData($('#editWorkForm')[0]);
+        var formData = new FormData($(this)[0]);
         // Starting Ajax request
         $.ajax({
             url: $(this).attr('action'),
