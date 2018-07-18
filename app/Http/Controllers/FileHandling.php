@@ -7,14 +7,20 @@ use App\Http\Requests\WorkFormRequest;
 
 class FileHandling
 {
-    public function getFile(WorkFormRequest $request, $form_file) {
-        $file = $request->file($form_file);
-        $fileinfo = pathinfo($file->getClientOriginalName());
-
+    public function __construct($request, $file) {
+        $this->file = $request->file($file);
     }
 
-    public function moveFile() {
-        $destination = 'assets/uploads';
-        $file->move($destination , $fileinfo['basename']);
+    public function get_file_info() {
+        return pathinfo($this->file->getClientOriginalName());
+    }
+
+    
+    public function get_file() {
+       return $this->file;
+    }
+
+    public function move_file($destination) {
+        $this->file->move($destination , $this->get_file_info()['basename']);
     }
 }

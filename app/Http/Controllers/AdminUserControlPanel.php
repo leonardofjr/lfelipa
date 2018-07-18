@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests\WorkFormRequest;
 use App\Http\Controllers\Controller;
 use DB;
+use App\Http\Controllers\FileHandling;
+
 class AdminUserControlPanel extends Controller
 {
     public function getProfilePage() {
@@ -34,6 +36,9 @@ class AdminUserControlPanel extends Controller
 
     
     public function addNewWorkPost(WorkFormRequest $request) {
+        // Helper custom class to help with file handling
+        $file_handler = new FileHandling($request, 'image');
+
          $technologies = [
              $request->input('html5'),
                 $request->input('css3'),
@@ -42,22 +47,17 @@ class AdminUserControlPanel extends Controller
                 $request->input('mysql'),
         ];
 
-        $destination = 'assets/uploads';
-        $file = $request->file('image');
-        $fileinfo = pathinfo($file->getClientOriginalName());
-        $file->move($destination , $fileinfo['basename']);
+        $file_handler->move_file('assets/uploads');
 
-        $filtered = array_filter($technologies, 'strlen');
-        $filtered = array_values($filtered);
         $data = [
             'title' => $request->input('title'),
             'description' => $request->input('description'),
-            'img' => $request->file('image'),
-            'basename' => $fileinfo['basename'],
-            'filename' => $fileinfo['filename'],
-            'ext' => $fileinfo['extension'],
+            'img' => $file_handler->get_file(),
+            'basename' => $file_handler->get_file_info()['basename'],
+            'filename' => $file_handler->get_file_info()['filename'],
+            'ext' => $file_handler->get_file_info()['extension'],
             'type' => $request->input('type'),
-            'technologies' => json_encode($filtered),
+            'technologies' => json_encode($this->array_filter_null($technologies)),
         ];
 
     /*
