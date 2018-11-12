@@ -16,18 +16,6 @@
             $data = [
                 'title' => 'Backend & Frontend Web Developer - Leonardo Felipa',
 
-                'heading1' => 'Leonardo',
-
-                'heading2' => 'Work',
-
-                'heading3' => 'Skills',
-
-                'heading4' => 'People refer me as a wildcard',
-
-                'text1' => 'Backend & Frontend Web Developer',
-
-             
-                'profilePhoto' => './assets/imgs/leo-felipa.jpeg',
             ];
 
             $languages = ['Javascript', 'Angular'];

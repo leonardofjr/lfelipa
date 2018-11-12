@@ -1,16 +1,25 @@
+@import "../helpers/variables";
+
+
 .mobile-navigation {
   ul {
 background: none;
   }
   
 }
+
+.navbar-toggler {
+  background-color:grey;
+}
 nav {
+      background: $navigation-background;
 
    ul {
-    height: 80px;
-    @include nav-bar-gradient;
     list-style: none;
+    width:100%;
   }
-   
+   a {
+     color: $hyperlink-color;
+   }
 
 }

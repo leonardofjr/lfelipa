@@ -4,7 +4,7 @@
 
 <div class="row">
           <div class="offset-8">
-           <button><a href="work/add">Add Work</a></button>
+           <a class="btn-primary btn" href="/admin/work/add">Add Work</a>
           </div>
           <div class="col-12">
           

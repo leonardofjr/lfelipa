@@ -1,0 +1,18 @@
+@import '../helpers/_variables.scss';
+
+// Global Classes
+.admin-sidebar-bg {
+    background: $admin-sidebar-bg;
+    height: 100vh;
+}
+
+// Admin Sidebar Setttings
+#admin-cpanel aside {
+    ul {
+        list-style-type: none;
+    }
+    a {
+        color: #fff;
+
+    }
+}

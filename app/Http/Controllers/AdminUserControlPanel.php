@@ -60,8 +60,8 @@ class AdminUserControlPanel extends Controller
             'technologies' => json_encode($this->array_filter_null($technologies)),
         ];
 
-    /*
-        DB::table('work')->insert($data);*/
+    
+        DB::table('work')->insert($data);
         
         return response()->json($data);
     }

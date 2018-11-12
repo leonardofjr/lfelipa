@@ -42,6 +42,10 @@ strong {
   font-weight: 600;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 /*** Hyperlinks ***/
 a {
   color: #000;
@@ -54,7 +58,7 @@ a:hover {
 
 body {
   font-family: "Roboto", serif, "Open Sans";
-  color: black;
+  color: white;
 }
 
 p {
@@ -90,16 +94,21 @@ h4 {
   background: none;
 }
 
+.navbar-toggler {
+  background-color: grey;
+}
+
+nav {
+  background: #000;
+}
+
 nav ul {
-  height: 80px;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,fefefe+47,fefefe+100&1+0,0.9+0,1+100 */
-  /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(254, 254, 254, 0.95) 47%, #fefefe 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6ffffff', endColorstr='#fefefe',GradientType=0 );
-  /* IE6-9 */
   list-style: none;
+  width: 100%;
+}
+
+nav a {
+  color: #999;
 }
 
 .work-container nav ul {
@@ -138,6 +147,45 @@ footer {
 }
 
 /** Pages **/
+.home-content {
+  width: 100%;
+  max-width: 400px;
+}
+
+#work-menu {
+  background: #000;
+}
+
+#work-menu ul {
+  list-style: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+#work-menu ul li {
+  padding: 12px 5px;
+}
+
+#work-menu a {
+  color: #999;
+}
+
 /** Themes **/
+.admin-sidebar-bg {
+  background: #333;
+  height: 100vh;
+}
+
+#admin-cpanel aside ul {
+  list-style-type: none;
+}
+
+#admin-cpanel aside a {
+  color: #fff;
+}
+
+body {
+  background-color: #EB2427;
+}
 
 /*# sourceMappingURL=app.css.map */

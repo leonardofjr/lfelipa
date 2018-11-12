@@ -16,7 +16,6 @@
             @include('frontend.section.home')
             @include('frontend.section.work')
             @include('frontend.section.skills')
-            @include('frontend.section.about')
 @endsection
 
 @section('footer')

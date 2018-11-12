@@ -1,12 +1,12 @@
 <div class="row">
   <div class="col-lg-3">
-    <nav>
+    <aside class="work-menu">
       <ul>
         <li >Websites</li>
         <li>Apps</li>
         <li>Games</li>
       </ul>
-    </nav>
+    </aside>
   </div>
   <div class="col-lg-9 work-content">
         <ul>
