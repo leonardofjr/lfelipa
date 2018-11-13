@@ -43,44 +43,5 @@ $(document).ready(function () {
 
         return false;
     });
-
-
-    jQuery('.newsletter-form').submit(function () {
-        event.preventDefault();
-        $.ajax({
-            url: $(this).attr('action'),
-            type: $(this).attr('method'),
-            dataType: 'json',
-            data: $(this).serialize(),
-
-            success: function (data, status) {
-                if (status === 'success') {
-                    $('.flash-message-newsletter-form-success').removeClass('d-none');
-                }
-            },
-            error: function (err) {
-                response = err.responseJSON;
-                if (err.status === 422) {
-                    if (response.contactFormName) {
-                        $('.flash-message-newsletter-form-name span').html(response.contactFormName[0]);
-                        $('.flash-message-newsletter-form-name').removeClass('d-none');
-                    }
-                    else {
-                        $('.flash-message-newsletter-form-name').addClass('d-none');
-                    }
-                    if (response.contactFormEmail) {
-                        $('.flash-message-newsletter-form-email span').html(response.contactFormEmail[0]);
-                        $('.flash-message-newsletter-form-email').removeClass('d-none');
-                    }
-                    else {
-                        $('.flash-message-newsletter-form-email').addClass('d-none');
-                    }
-                }
-            }
-        });
-
-        return false;
-    });
-
 });
 

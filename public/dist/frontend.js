@@ -1,3 +1,52 @@
+$(document).ready(function () {
+
+    jQuery('.contact-form').submit(function () {
+        event.preventDefault();
+        $.ajax({
+            url: $(this).attr('action'),
+            type: $(this).attr('method'),
+            dataType: 'json',
+            data: $(this).serialize(),
+   
+            success: function (data, status) {
+                if (status === 'success') {
+                    $('.flash-message-contact-form-success').removeClass('d-none');
+                }
+            },
+            error: function(err) {
+                response = err.responseJSON;
+                if (err.status === 422) {
+                    if (response.contactFormName) {
+                        $('.flash-message-contact-form-name span').html(response.contactFormName[0]);
+                        $('.flash-message-contact-form-name').removeClass('d-none');
+                    }
+                    else {
+                        $('.flash-message-contact-form-name').addClass('d-none');
+                    }
+                    if (response.contactFormEmail) {
+                        $('.flash-message-contact-form-email span').html(response.contactFormEmail[0]);
+                        $('.flash-message-contact-form-email').removeClass('d-none');
+                    }
+                    else {
+                        $('.flash-message-contact-form-email').addClass('d-none');
+                    }
+                    if (response.contactFormMessage) {
+                        $('.flash-message-contact-form-message span').html(response.contactFormMessage[0]);
+                        $('.flash-message-contact-form-message').removeClass('d-none');
+                    }
+                    else {
+                        $('.flash-message-contact-form-message').addClass('d-none');
+                    }
+                }
+            }
+        });
+
+        return false;
+    });
+});
+
+
+
 
 $(document).ready(function () {
 
@@ -88,62 +137,9 @@ $(document).ready(function () {
 
 
 
-
-$.fn.timer = function (progress) {
-    class progressBar {
-        constructor(progress) {
-            this.progress = progress;
-        }
-
-        init(target) {
-            this.render(target[0])
-        }
-
-        getProgress() {
-            return this.progress;
-        }
-
-        render(target) {
-            this.animation(target)
-        }
-
-        animation(target) {
-            var timeleft = this.getProgress();
-            var time = this.getProgress();
-            var timer = setInterval(function () {
-                target.innerHTML = time - --timeleft + '%';
-                if (timeleft <= 0) {
-                    clearInterval(timer);
-                }
-            }, 30);
-
-        }
-
-    }
-
-    var javascript = new progressBar(progress);
-
-    javascript.init($(this))
-};
-
-
-$(document).ready(function () {
-    $('.work-container ul li').click(function () {
-        var index = $(this).index();
-        $(this).parent().children().removeClass('active');
-        $(this).addClass('active');
-        $(this).parent().parent().parent().siblings().children().children().hide();
-        $(this).parent().parent().parent().siblings().children().children().eq(index).fadeIn();
-    })
-})
-
-
-
-
-
 $(document).ready(function () {
 
-    /**** Srolling Functionality Services ****/
+/**** Srolling Functionality Services ****/
     // init controller
     var anchorLinkScrollingController = new ScrollMagic.Controller();
 
@@ -170,20 +166,20 @@ $(document).ready(function () {
 
     var servicesController = new ScrollMagic.Controller();
     $('.fade-in').each(function () {
-        var fadeTween = TweenMax.from(this, 0.2, { autoAlpha: 0, scale: 0.5, y: '-=50', ease: Linear.easeNone });
+        var fadeTween = TweenMax.from(this , 0.2, {autoAlpha: 0, scale: 0.5, y: '-=50', ease: Linear.easeNone});
 
         var scene = new ScrollMagic.Scene({
             triggerElement: this
         })
-            .setTween(fadeTween) // trigger a TweenMax tween
-            .addTo(servicesController)
+        .setTween(fadeTween) // trigger a TweenMax tween
+        .addTo(servicesController)
     })
 
 
-    /* Collapse Mobile Navigation Box On Click */
+/* Collapse Mobile Navigation Box On Click */
 
-    $('#navbarToggleExternalContent .nav-item').each(function () {
-        $(this).click(function () {
+    $('#navbarToggleExternalContent .nav-item').each(function() {
+        $(this).click(function() {
             $('nav:nth-child(2) button').attr('aria-expanded', 'false');
             $('nav:nth-child(2) button').removeClass('navbar-toggler');
             $('nav:nth-child(2) button').addClass('navbar-toggler collapsed');
@@ -220,4 +216,54 @@ if (triggered == false) {
 
     });
 
+
 }
+
+$.fn.timer = function (progress) {
+    class progressBar {
+        constructor(progress) {
+            this.progress = progress;
+        }
+
+        init(target) {
+            this.render(target[0])
+        }
+
+        getProgress() {
+            return this.progress;
+        }
+
+        render(target) {
+            this.animation(target)
+        }
+        
+        animation(target) {
+            var timeleft = this.getProgress();
+            var time = this.getProgress();
+            var timer = setInterval(function () {
+                target.innerHTML = time- --timeleft + '%';
+                if (timeleft <= 0) {
+                    clearInterval(timer);
+                }
+            }, 30);
+
+        }
+
+    }
+  
+    var javascript = new progressBar(progress);
+
+    javascript.init($(this))
+};
+
+
+$(document).ready(function() {
+    $('.work-container ul li').click(function() {
+        var index = $(this).index();
+        $(this).parent().children().removeClass('active');
+        $(this).addClass('active');
+        $(this).parent().parent().siblings().children().children().hide();
+        $(this).parent().parent().siblings().children().children().eq(index).fadeIn();
+    })
+})
+

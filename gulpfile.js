@@ -18,12 +18,22 @@ elixir(function(mix) {
     mix.sass('app.scss');
 });
 
-//script paths
+// Admin
 var jsFiles = 'public//assets/js/admin/*.js',
     jsDest = 'public/dist';
 
 gulp.task('admin', function () {
     return gulp.src(jsFiles)
         .pipe(concat('admin.js'))
+        .pipe(gulp.dest(jsDest));
+});
+
+// Frontend
+var jsFiles = 'public//assets/js/frontend/*.js',
+    jsDest = 'public/dist';
+
+gulp.task('frontend', function () {
+    return gulp.src(jsFiles)
+        .pipe(concat('frontend.js'))
         .pipe(gulp.dest(jsDest));
 });
