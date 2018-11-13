@@ -1,9 +1,7 @@
 @extends('layouts.admin')
 @section('content')
-
-
 <div class="row">
-          <div class="offset-8">
+          <div class="offset-11">
            <a class="btn-primary btn" href="/admin/work/add">Add Work</a>
           </div>
           <div class="col-12">
@@ -16,7 +14,7 @@
                         {{$technoloogy}}
                     @endforeach
                 </p>
-                <div class="offset-8">
+                <div class="offset-11">
                 <a href="work/edit/{{$item->id}}">Edit</a>
                 <form id="deleteWorkForm" action="work/delete/{{$item->id}}" method="DELETE">
                       {{ csrf_field() }}

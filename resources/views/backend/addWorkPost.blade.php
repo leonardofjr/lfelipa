@@ -2,12 +2,12 @@
 @section('content')
             <section class="container"> 
             <h2>Add Work</h2>
-            <form id="addWorkForm" method="POST" enctype="multipart/form-data" action="add-new-work-post">
+            <form id="addWorkForm" method="POST" enctype="multipart/form-data" action="/admin/work/add-new-work-post">
                 {{ csrf_field() }}
                 <div class="form-group">
                     <label for="title">Title:</label>
                     <input type="text" class="form-control" id="title" name="title" >
-                    <div class="flash-message-title d-none">
+                    <div class="alert alert-warning mt-2 flash-message-title d-none">
                         <span></span>
                     </div>
                 </div>
@@ -20,7 +20,7 @@
                       
                             @endforeach
                         </select>
-                    <div class="flash-message-type d-none">
+                    <div class="alert alert-warning mt-2 flash-message-type d-none">
                         <span></span>
                     </div>
                 </div>
@@ -28,7 +28,7 @@
                 <div class="form-group">
                     <label for="image">Image:</label>
                     <input type="file" class="form-control" id="image" name="image" >
-                        <div class="flash-message-image d-none">
+                        <div class="alert alert-warning mt-2 flash-message-image d-none">
                         <span></span>
                     </div>
                 </div>
@@ -36,7 +36,7 @@
                 <div class="form-group">
                     <label for="description">Description:</label>
                     <textarea type="text" class="form-control" id="description" name="description" ></textarea>
-                        <div class="flash-message-description d-none">
+                        <div class="alert alert-warning mt-2 flash-message-description d-none">
                         <span></span>
                     </div>
                 </div>

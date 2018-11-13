@@ -16,8 +16,11 @@ class CreateWorkTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('type');
-            $table->string('description')->unique();
-            $table->string('technologies', 1000);
+            $table->string('filename');
+            $table->string('basename');
+            $table->string('ext');
+            $table->text('description');
+            $table->string('technologies');
             $table->rememberToken();
             $table->timestamps();
         });

@@ -19,11 +19,11 @@ elixir(function(mix) {
 });
 
 //script paths
-var jsFiles = 'public//assets/js/**/*.js',
-    jsDest = 'public/dist/scripts';
+var jsFiles = 'public//assets/js/admin/*.js',
+    jsDest = 'public/dist';
 
-gulp.task('scripts', function () {
+gulp.task('admin', function () {
     return gulp.src(jsFiles)
-        .pipe(concat('scripts.js'))
+        .pipe(concat('admin.js'))
         .pipe(gulp.dest(jsDest));
 });

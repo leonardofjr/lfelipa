@@ -45,6 +45,8 @@ class AdminUserControlPanel extends Controller
                 $request->input('javascript'),
                 $request->input('php'),
                 $request->input('mysql'),
+                $request->input('angular'),
+                $request->input('laravel'),
         ];
 
         $file_handler->move_file('assets/uploads');
@@ -52,7 +54,6 @@ class AdminUserControlPanel extends Controller
         $data = [
             'title' => $request->input('title'),
             'description' => $request->input('description'),
-            'img' => $file_handler->get_file(),
             'basename' => $file_handler->get_file_info()['basename'],
             'filename' => $file_handler->get_file_info()['filename'],
             'ext' => $file_handler->get_file_info()['extension'],
@@ -74,6 +75,8 @@ class AdminUserControlPanel extends Controller
             $request->input('javascript'),
             $request->input('php'),
             $request->input('mysql'),
+            $request->input('angular'),
+            $request->input('laravel'),
         ];
 
         $data = [
@@ -116,6 +119,8 @@ class AdminUserControlPanel extends Controller
             'Javascript',
             'PHP',
             'MySql',
+            'Angular',
+            'Laravel',
         );
     }
   
