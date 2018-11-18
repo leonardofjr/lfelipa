@@ -37,8 +37,7 @@ class AdminUserControlPanel extends Controller
     
     public function addNewWorkPost(WorkFormRequest $request) {
         // Helper custom class to help with file handling
-        $file_handler = new FileHandling($request, 'image');
-
+       $file_handler = new FileHandling($request, 'image[0]');
          $technologies = [
              $request->input('html5'),
                 $request->input('css3'),
@@ -49,15 +48,17 @@ class AdminUserControlPanel extends Controller
                 $request->input('laravel'),
         ];
 
-        $file_handler->move_file('assets/uploads');
+ 
+
+      //  $file_handler->move_file('assets/uploads');
 
         $data = [
             'title' => $request->input('title'),
             'description' => $request->input('description'),
-            'basename' => $file_handler->get_file_info()['basename'],
-            'filename' => $file_handler->get_file_info()['filename'],
-            'ext' => $file_handler->get_file_info()['extension'],
-            'type' => $request->input('type'),
+          //  'basename' => $file_handler->get_file_info()['basename'],
+        //    'filename' => $file_handler->get_file_info()['filename'],
+       //     'ext' => $file_handler->get_file_info()['extension'],
+      //      'type' => $request->input('type'),
             'technologies' => json_encode($this->array_filter_null($technologies)),
         ];
 

@@ -19,21 +19,21 @@ elixir(function(mix) {
 });
 
 // Admin
-var jsFiles = 'public//assets/js/admin/*.js',
-    jsDest = 'public/dist';
+var adminJsFiles = 'public/assets/js/admin/*.js',
+    adminJsDest = 'public/dist';
 
 gulp.task('admin', function () {
-    return gulp.src(jsFiles)
+    return gulp.src(adminJsFiles)
         .pipe(concat('admin.js'))
-        .pipe(gulp.dest(jsDest));
+        .pipe(gulp.dest(adminJsDest));
 });
 
 // Frontend
-var jsFiles = 'public//assets/js/frontend/*.js',
-    jsDest = 'public/dist';
+var frontendJsFiles = 'public//assets/js/frontend/*.js',
+    frontendJsDest = 'public/dist';
 
 gulp.task('frontend', function () {
-    return gulp.src(jsFiles)
+    return gulp.src(frontendJsFiles)
         .pipe(concat('frontend.js'))
-        .pipe(gulp.dest(jsDest));
+        .pipe(gulp.dest(frontendJsDest));
 });
